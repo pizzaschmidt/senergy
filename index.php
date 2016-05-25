@@ -81,8 +81,12 @@ nav img {
 	width: 100%;
 	height: calc(100vh - 385px);
 }
-.open {
-	height: 300px;
+.drop-open {
+	height: 200px;
+	width: 100%;
+}
+.drop-close {
+	height: 200px;
 }
 
 
@@ -141,7 +145,7 @@ footer img:hover {
 	</div>
 </nav>
 <div id="drop"></div>
-<div id="phone_number"><span>CALL NOW: (951) 666-1738</span></div>
+<div id="phone_number"><span>CALL NOW: (844) 330-7517</span></div>
 
 <!-- Begin Map Code -->
 <div id="map">
@@ -174,8 +178,10 @@ footer img:hover {
 		$('#services').on("click", function() {
   		if(toggleState) {
     		$("#drop").css("height", "200");
+    		$("#drop").css("width", "100");
   		} else {
     		$("#drop").css("height", "0");
+    		$("#drop").css("width", "100");
   		}
   		toggleState = !toggleState;
 		});
