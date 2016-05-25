@@ -7,7 +7,6 @@
 </head>
 <style type="text/css">
 /*GLOBAL*/
-/*DELETE THIS COMMENT */
 body {
 	width: 100vw;
 	height: 100vh;
