@@ -72,8 +72,6 @@ nav img {
 
 
 #drop {
-	width: 100vw;
-	height: 0px;
 	background-color: green;
 	transition: height 0.3s ease;
 }
@@ -85,10 +83,6 @@ nav img {
 	height: 200px;
 	width: 100%;
 }
-.drop-close {
-	height: 200px;
-}
-
 
 
 #map div span {
@@ -177,11 +171,9 @@ footer img:hover {
 		var toggleState = true;
 		$('#services').on("click", function() {
   		if(toggleState) {
-    		$("#drop").css("height", "200");
-    		$("#drop").css("width", "100");
+    		$("#drop").addClass("drop-open");
   		} else {
-    		$("#drop").css("height", "0");
-    		$("#drop").css("width", "100");
+    		$("#drop").removeClass("drop-open");
   		}
   		toggleState = !toggleState;
 		});
