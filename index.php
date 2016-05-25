@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 </head>
 <style type="text/css">
@@ -72,16 +72,14 @@ nav img {
 
 
 #drop {
-	width: 100%;
+	width: 100vw;
 	height: 0px;
 	background-color: green;
 	transition: height 0.3s ease;
 }
 #map {
 	width: 100%;
-	height: 500px;
-	background-image: url("imgs/map.jpg");
-	background-size: cover;
+	height: calc(100vh - 385px);
 }
 .open {
 	height: 300px;
@@ -94,6 +92,43 @@ nav img {
 	text-align: center;
 	font-size: 1.5em;
 	color: #252525;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+/*** Footer ***/
+footer {
+	width: 100%;
+	height: 250px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background-color: #252525;
+	position: relative;
+	bottom: 0;
+	vertical-align: middle;
+}
+footer #social-logo-wrap {
+	width: calc(100% - 4px);
+    text-align: center;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+footer .helper {
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+}
+footer img {
+	height: 150px;
+	margin: 0 10px;
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
+}
+footer img:hover {
+	opacity: 1;
 }
 </style>
 <body>
@@ -108,19 +143,33 @@ nav img {
 <div id="drop"></div>
 <div id="phone_number"><span>CALL NOW: (951) 666-1738</span></div>
 
-
+<!-- Begin Map Code -->
 <div id="map">
+	<!-- MAP INFO
 	<div>
-		<span>AIR CONDITIONING & HEATING</span>
+		<span>HEATING & AIR CONDITIONING</span>
 		<span>6280 Brockton Ave, Riverside, CA 92506</span>
 		<span>(821) 121-2212</span>
 		<span>Open 24/7 to Members</span>
-	</div>
+	</div> -->
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.2124278009514!2d-117.88838168479482!3d33.677563280709485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdf1bc16893b1%3A0xd32e59f4921594fd!2s2930+Bristol+St%2C+Costa+Mesa%2C+CA+92626!5e0!3m2!1sen!2sus!4v1449098971260" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
+<!-- End Map Code -->
+
+<!-- Begin Footer Code -->
+<footer>
+	<div class="helper"></div>
+	<div id="social-logo-wrap">
+		<a href="https://www.linkedin.com/in/anthony-torres-40a9a389" target="_blank"><img src="imgs/logos/linkedin-color-med.png"></img></a>
+		<a href="https://www.facebook.com/Senergyair/" target="_blank"><img src="imgs/logos/facebook-color-med.png"></a>
+		<a href="http://www.yelp.com/biz/senergy-heating-and-air-conditioning-riverside-2" target="_blank"><img src="imgs/logos/yelp-color-med.png"></a>
+	</div>
+</footer>
+<!-- End Footer Code -->
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		//TOGGLES DROP DOWN MENU
+		//toggles drop down menu
 		var toggleState = true;
 		$('#services').on("click", function() {
   		if(toggleState) {
@@ -131,5 +180,8 @@ nav img {
   		toggleState = !toggleState;
 		});
 	});
+	
+	
+	
 </script>
 </html>
