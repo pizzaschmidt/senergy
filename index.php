@@ -73,8 +73,9 @@ nav img {
 
 #drop {
 	width: 100%;
-	height: 100px;
+	height: 0px;
 	background-color: green;
+	transition: height 0.3s ease;
 }
 #map {
 	width: 100%;
@@ -82,13 +83,25 @@ nav img {
 	background-image: url("imgs/map.jpg");
 	background-size: cover;
 }
+.open {
+	height: 300px;
+}
+
+
+
+#map div span {
+	display: block;
+	text-align: center;
+	font-size: 1.5em;
+	color: #252525;
+}
 </style>
 <body>
 <nav>
 	<img src="imgs/senergy.png">
 	<div id="menu">
 		<span><a href="#">ABOUT</a></span>
-		<span><a href="#">SERVICES</a></span>
+		<span id="services"><a href="#">SERVICES</a></span>
 		<span><a href="#">CONTACT</a></span>
 	</div>
 </nav>
@@ -97,15 +110,26 @@ nav img {
 
 
 <div id="map">
-	
+	<div>
+		<span>AIR CONDITIONING & HEATING</span>
+		<span>6280 Brockton Ave, Riverside, CA 92506</span>
+		<span>(821) 121-2212</span>
+		<span>Open 24/7 to Members</span>
+	</div>
 </div>
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("#menu span a:nth-child(2)").click(function(
-			
-			);
-		);
+		//TOGGLES DROP DOWN MENU
+		var toggleState = true;
+		$('#services').on("click", function() {
+  		if(toggleState) {
+    		$("#drop").css("height", "200");
+  		} else {
+    		$("#drop").css("height", "0");
+  		}
+  		toggleState = !toggleState;
+		});
 	});
 </script>
-</html>#00aeef
+</html>
