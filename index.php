@@ -2,134 +2,48 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 </head>
-<style type="text/css">
-/*GLOBAL*/
-body {
-	width: 100vw;
-	height: 100vh;
-	padding: 0;
-	margin: 0;
-	font-family: 'Oswald', sans-serif;
-	overflow: auto;
-	color: white;
-}
-a {
- 	text-decoration: none;
-}
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-ul div {
-	float: left;
-	margin: 0;
-}
-nav {
- 	height: 100px;
- 	width: 100%;
- 	background-color: #252525;
- 	vertical-align: middle;
-}
-#menu  {
-	float: right;
-	margin-right: 150px;
-}
-nav img {
-	width: 300px;
-	float: left;
-	margin-left: 150px;
-	margin-top: 12px;
-}
-#menu span {
-	line-height: 100px;
-}
-#menu span a {
-	color: white;
-	transition: color 0.3s ease;
-}
-#menu span a:hover {
-	color: #6AB7D1;
-}
-#menu span:nth-child(2) {
-	margin: 0 35px 0 35px;
-}
-#phone_number {
-	width: 100%;
-	height: 35px;
-	background-color: #00aeef;
-	box-shadow: 0 3px 10px #333;
-}
-#phone_number span {
-	float: right;
-	margin-right: 150px;
-	line-height: 35px;
-	color: #252525;
-}
+
+<!-- Script for Snazzy Maps Begin -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        
+<script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 10,
+
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(33.9533, -117.3962), // Riverside
+
+            // How you would like to style the map. 
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [{"stylers":[{"hue":"#ff1a00"},{"invert_lightness":true},{"saturation":-100},{"lightness":33},{"gamma":0.5}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2D333C"}]}]
+        };
+
+        // Get the HTML DOM element that will contain your map 
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
 
 
-#drop {
-	background-color: green;
-	transition: height 0.3s ease;
-}
-#map {
-	width: 100%;
-	height: calc(100vh - 385px);
-}
-.drop-open {
-	height: 200px;
-	width: 100%;
-}
+    }
+</script>
+<!-- Snazzy Maps End -->
 
-
-#map div span {
-	display: block;
-	text-align: center;
-	font-size: 1.5em;
-	color: #252525;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-}
-
-/*** Footer ***/
-footer {
-	width: 100%;
-	height: 250px;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	background-color: #252525;
-	position: relative;
-	bottom: 0;
-	vertical-align: middle;
-}
-footer #social-logo-wrap {
-	width: calc(100% - 4px);
-    text-align: center;
-    height: 150px;
-    display: inline-block;
-    vertical-align: middle;
-}
-footer .helper {
-	display: inline-block;
-	height: 100%;
-	width: 0;
-	vertical-align: middle;
-}
-footer img {
-	height: 150px;
-	margin: 0 10px;
-	opacity: 0.7;
-	transition: opacity 0.2s ease;
-}
-footer img:hover {
-	opacity: 1;
-}
-</style>
 <body>
+	
 <nav>
 	<img src="imgs/senergy.png">
 	<div id="menu">
@@ -150,13 +64,12 @@ footer img:hover {
 		<span>(821) 121-2212</span>
 		<span>Open 24/7 to Members</span>
 	</div> -->
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.2124278009514!2d-117.88838168479482!3d33.677563280709485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdf1bc16893b1%3A0xd32e59f4921594fd!2s2930+Bristol+St%2C+Costa+Mesa%2C+CA+92626!5e0!3m2!1sen!2sus!4v1449098971260" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.2124278009514!2d-117.88838168479482!3d33.677563280709485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdf1bc16893b1%3A0xd32e59f4921594fd!2s2930+Bristol+St%2C+Costa+Mesa%2C+CA+92626!5e0!3m2!1sen!2sus!4v1449098971260" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>-->
 </div>
 <!-- End Map Code -->
 
 <!-- Begin Footer Code -->
 <footer>
-	<div class="helper"></div>
 	<div id="social-logo-wrap">
 		<a href="https://www.linkedin.com/in/anthony-torres-40a9a389" target="_blank"><img src="imgs/logos/linkedin-color-med.png"></img></a>
 		<a href="https://www.facebook.com/Senergyair/" target="_blank"><img src="imgs/logos/facebook-color-med.png"></a>
