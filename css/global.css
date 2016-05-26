@@ -1,7 +1,10 @@
 body {
 	width: 100vw;
 	height: 100vh;
+	background-image: url("../imgs/IMG_0558.JPG");
+	background-size: cover;
 	background-color: #252525;
+	background-repeat: no-repeat;
 	padding: 0;
 	margin: 0;
 	font-family: 'Oswald', sans-serif;
@@ -23,7 +26,7 @@ ul div {
 nav {
  	height: 100px;
  	width: 100vw;
- 	background-color: #252525;
+ 	background-color: rgba(255,255,255, 0.3);
  	vertical-align: middle;
 }
 #menu  {
@@ -38,22 +41,29 @@ nav img {
 }
 #menu span {
 	line-height: 100px;
+	margin: 0;
 }
 #menu span a {
-	color: white;
-	transition: color 0.3s ease;
+    color: white;
+    display: inline-block;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0 30px;
+    transition: background-color 0.3s ease;
+    float: left;
 }
 #menu span a:hover {
-	color: #6AB7D1;
+	background-color: #6AB7D1;
 }
 #menu span:nth-child(2) {
-	margin: 0 35px 0 35px;
+	/*margin: 0 35px 0 35px;*/
 }
 #phone_number {
 	width: 100vw;
 	height: 35px;
-	background-color: #00aeef;
-	box-shadow: 0 3px 10px #333;
+	background-color: rgba(255,255,255, 0.3);
+	/*box-shadow: 0 3px 10px #333;*/
 }
 #phone_number span {
 	float: right;
@@ -78,10 +88,10 @@ nav img {
 footer {
 	width: 100vw;
 	height: 200px;
-	background-color:#252525;
+	background-color: rgba(15,15,15, 0.8);
 	position: absolute;
 	bottom: 0;
-    box-shadow: 0 0 50px 55px #252525;
+    box-shadow: 0 0 50px 55px rgba(15,15,15, 0.8);
 }
 footer #social-logo-wrap {
 	width: 100%;
