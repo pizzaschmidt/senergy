@@ -8,6 +8,7 @@
 </nav>
 <div id="drop"></div>
 <div id="phone_number"><span>CALL NOW: (844) 330-7517</span></div>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		//toggles drop down menu
