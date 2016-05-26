@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" href="css/global.css" type="text/css">
-	<link rel="stylesheet" href="css/index.css" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-</head>
-
-
-
+    <head>
+        <?php include "includes/header.php"; ?>
+        <link rel="stylesheet" href="css/index.css" type="text/css" />
+    </head>
 <body>
-<?php
-    include "includes/mainnav.php";
-?>
-<nav>
-	<a href="index.1.php"><img src="imgs/senergy.png"></a>
-	<div id="menu">
-		<span><a href="about.php">ABOUT</a></span>
-		<span id="services"><a href="services.php">SERVICES</a></span>
-		<span><a href="contact.php">CONTACT</a></span>
-	</div>
-</nav>
-<div id="drop"></div>
-<div id="phone_number"><span>CALL NOW: (844) 330-7517</span></div>
-
-<!-- Begin Map Code -->
-<div id="map">
-	
-</div>
-<!-- End Map Code -->
-
-<!-- Begin Footer Code -->
-<footer>
-	<div id="social-logo-wrap">
-		<a href="https://www.linkedin.com/in/anthony-torres-40a9a389" target="_blank"><img src="imgs/logos/linkedin-color-med.png"></img></a>
-		<a href="https://www.facebook.com/Senergyair/" target="_blank"><img src="imgs/logos/facebook-color-med.png"></a>
-		<a href="http://www.yelp.com/biz/senergy-heating-and-air-conditioning-riverside-2" target="_blank"><img src="imgs/logos/yelp-color-med.png"></a>
-	</div>
-</footer>
-<!-- End Footer Code -->
+    <!--Begin nav-->
+    <?php include "includes/mainnav.php";?>
+    <!--End nav-->
+    
+    <!-- Begin Map Code -->
+    <div id="map"></div>
+    <!-- End Map Code -->
+    
+    <!-- Begin footer -->
+    <?php include "includes/footer.php" ?>
+    <!--End footer-->
 </body>
+<script type="text/javascript" src="">
+    <?php
+        $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $parts = parse_url($url);
+        $path_parts = explode('/', $parts['path']);
+        $page = strval($path_parts[1]);
+    ?>
+    
+    var pages = ["index.1.php", "about.php", "contact.php", "services.php"];
+    var current_page = <?php echo $page ?>;
+    
+    switch (String(current_page)) {
+        case "index.1.php":
+            alert("fuck");
+            break;
+        case "about.php":
+            break;
+        case "contact.php":
+            break;
+        case "services.php":
+            break;
+    }
+</script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		//toggles drop down menu

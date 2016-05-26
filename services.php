@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <?php 
-        include "includes/header.php";
-        include "includes/mainnav.php";
-    ?>
-
+    <head>
+        <?php include "includes/header.php";?>
+    </head>
 <body>
-    
-    <?php include "includes/footer.php?" ?>
+    <?php include "includes/mainnav.php"?>
+    <?php include "includes/footer.php" ?>
 </body>
-    
-    
-    
-    
-    
 </html>
