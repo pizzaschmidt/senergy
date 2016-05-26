@@ -36,8 +36,6 @@
 
         // Create the Google Map using our element and options defined above
         var map = new google.maps.Map(mapElement, mapOptions);
-
-
     }
 </script>
 <!-- Snazzy Maps End -->
@@ -47,25 +45,16 @@
 <nav>
 	<img src="imgs/senergy.png">
 	<div id="menu">
-		<span><a href="#">ABOUT</a></span>
-		<span id="services"><a href="#">SERVICES</a></span>
-		<span><a href="#">CONTACT</a></span>
+		<span><a href="about.php">ABOUT</a></span>
+		<span id="services"><a href="services.php">SERVICES</a></span>
+		<span><a href="contact.php">CONTACT</a></span>
 	</div>
 </nav>
 <div id="drop"></div>
 <div id="phone_number"><span>CALL NOW: (844) 330-7517</span></div>
 
 <!-- Begin Map Code -->
-<div id="map">
-	<!-- MAP INFO
-	<div>
-		<span>HEATING & AIR CONDITIONING</span>
-		<span>6280 Brockton Ave, Riverside, CA 92506</span>
-		<span>(821) 121-2212</span>
-		<span>Open 24/7 to Members</span>
-	</div> -->
-	<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.2124278009514!2d-117.88838168479482!3d33.677563280709485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdf1bc16893b1%3A0xd32e59f4921594fd!2s2930+Bristol+St%2C+Costa+Mesa%2C+CA+92626!5e0!3m2!1sen!2sus!4v1449098971260" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-</div>
+<div id="map"></div>
 <!-- End Map Code -->
 
 <!-- Begin Footer Code -->
@@ -91,8 +80,5 @@
   		toggleState = !toggleState;
 		});
 	});
-	
-	
-	
 </script>
 </html>
